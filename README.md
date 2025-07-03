@@ -3,7 +3,7 @@
 ![App Screenshot](./public/assets/image/bbb_demo.PNG)
 
 Real-Time Neural Enhancement for HTTP Adaptive Streaming with WebGPU. 
-This project integrates the `webgpu-neural` package with dashjs to ru neural enhancement for HTTP Adaptive Streaming using WebGPU.
+This project integrates the `webgpu-neural` package with dashjs to run neural enhancement for HTTP Adaptive Streaming using WebGPU.
 
 ---
 
