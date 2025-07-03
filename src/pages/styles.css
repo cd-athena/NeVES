@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inconsolata', monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: #045b88;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  position: relative;
+  flex: 1;
+  height: 100vh;
+  overflow: auto;
+  background: white;
+  color: black;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#guiParent .dg.main {
+  font-size: 25px !important;    /* Adjust font size */
+}
+
+#guiParent .dg.main ul li {
+  font-size: 25px !important;    /* Adjust font size */
+}
+
+#guiParent .dg .property-name {
+  font-size: 25px !important;
+}
+
+#guiParent .dg select,
+#guiParent .dg input,
+#guiParent .dg .button {
+  font-size: 25px !important;
+}
+
+button {
+    font-size: 25px;
+}

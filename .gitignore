@@ -1,0 +1,100 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+## WebGPU-Neural Folder ##
+
+# Dependency directories
+webgpu-neural/node_modules/
+webgpu-neural/bower_components/
+
+# TypeScript compiled files
+webgpu-neural/dist/
+webgpu-neural/build/
+webgpu-neural/out/
+webgpu-neural/lib/
+webgpu-neural/*.tsbuildinfo
+
+# Logs
+webgpu-neural/logs/
+webgpu-neural/*.log
+webgpu-neural/npm-debug.log*
+
+# Editor directories and files
+webgpu-neural/.idea/
+webgpu-neural/.vscode/
+webgpu-neural/*.swp
+webgpu-neural/*.swo
+webgpu-neural/*.sublime-workspace
+
+# Operating System files
+webgpu-neural/.DS_Store
+webgpu-neural/Thumbs.db
+
+# Environment files
+webgpu-neural/.env
+webgpu-neural/.env.local
+webgpu-neural/.env.development.local
+webgpu-neural/.env.test.local
+webgpu-neural/.env.production.local
+
+# Optional npm cache & logs
+webgpu-neural/.npm
+webgpu-neural/.npmrc
+webgpu-neural/.npm-debug.log*
+
+# Optional eslint cache
+webgpu-neural/.eslintcache
+
+# Optional: Yarn PnP files
+webgpu-neural/.pnp/
+webgpu-neural/.pnp.js
+
+# Yarn Integrity file
+webgpu-neural/.yarn-integrity
+
+# Next.js build output
+webgpu-neural/.next/
+
+# Coverage directory used by tools like Istanbul
+webgpu-neural/coverage/
+
+# Testing
+webgpu-neural/*.test.ts
+webgpu-neural/*.spec.ts
+
+# Tensorflow weight conversion
+webgpu-neural/tensorflow/
