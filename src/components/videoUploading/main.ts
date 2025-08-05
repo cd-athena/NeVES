@@ -26,6 +26,8 @@ import CanvasControls from '../CanvasControls';
 import fullscreenTexturedQuadWGSL from '../../shaders/fullscreenTexturedQuad.wgsl';
 import sampleExternalTextureWGSL from '../../shaders/sampleExternalTexture.frag.wgsl';
 
+import type { JSX } from "react";
+
 type Settings = {
   requestFrame: string;
   effect: string;
@@ -97,14 +99,19 @@ const init: SampleInit = async ({
   });
 
   function updateVideoFrameTexture() {
-    if (video.videoWidth > 0 && video.videoHeight > 0) {
-      const currentWidth = video.videoWidth;
-      const currentHeight = video.videoHeight;
+    //if (video.videoWidth > 0 && video.videoHeight > 0) {
+      // const currentWidth = video.videoWidth;
+      // const currentHeight = video.videoHeight;
+      
+      if (video.videoWidth === 0 || video.videoHeight === 0) {
+        console.log("Found invalid frame... Skipping...");
+        return; // Invalid frame, skip   
+      }
 
-      if (currentWidth !== WIDTH || currentHeight !== HEIGHT) {
-        console.log(`Resolution updated to: ${currentWidth}x${currentHeight}`);
-        WIDTH = currentWidth;
-        HEIGHT = currentHeight;
+      if (video.videoWidth !== WIDTH || video.videoHeight !== HEIGHT) {
+        console.log(`Resolution updated to: ${video.videoWidth}x${video.videoHeight}`);
+        WIDTH = video.videoWidth;
+        HEIGHT = video.videoHeight;
         videoFrameTexture = device.createTexture({
           size: [WIDTH, HEIGHT, 1],
           format: 'rgba16float',
@@ -116,12 +123,13 @@ const init: SampleInit = async ({
         updateRenderBindGroup();
         updateCanvasSize();
       }
+      
       device.queue.copyExternalImageToTexture(
         { source: video },
         { texture: videoFrameTexture },
-        [WIDTH, HEIGHT],
+        [video.videoWidth, video.videoHeight],
       );
-    }
+    //}
   }
 
   // bind 2: compare
